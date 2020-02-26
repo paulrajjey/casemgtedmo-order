@@ -6,12 +6,44 @@ package com.vz.vzordercase;
 
 public class Product implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Product() {
-    }
+	private java.lang.String id;
+	private java.lang.String name;
+	private java.lang.String type;
 
+	public Product() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public java.lang.String getName() {
+		return this.name;
+	}
+
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getType() {
+		return this.type;
+	}
+
+	public void setType(java.lang.String type) {
+		this.type = type;
+	}
+
+	public Product(java.lang.String id, java.lang.String name,
+			java.lang.String type) {
+		this.id = id;
+		this.name = name;
+		this.type = type;
+	}
 
 }
