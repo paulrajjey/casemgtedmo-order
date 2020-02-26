@@ -183,7 +183,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Streaming Device</valueString>
+        <valueString>StreamingDevice</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -216,7 +216,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>Streaming Software</valueString>
+        <valueString>StreamingSoftware</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
