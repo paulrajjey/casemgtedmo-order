@@ -80,7 +80,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>118</width>
+      <width>306</width>
       <header>Nrocess Name</header>
       <boundName>product</boundName>
       <factField>process</factField>
@@ -183,7 +183,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>StreamingDevice</valueString>
+        <valueString>vzordercase.StreamingHardware</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
@@ -216,7 +216,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>StreamingSoftware</valueString>
+        <valueString>vzordercase.StreamingSoftware</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
