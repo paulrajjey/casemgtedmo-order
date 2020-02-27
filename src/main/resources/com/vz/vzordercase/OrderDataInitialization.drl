@@ -1,6 +1,5 @@
 package com.vz.vzordercase;
 
-import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
 import com.vz.vzordercase.Order;
 import com.vz.vzordercase.Product;
 
@@ -8,7 +7,7 @@ import com.vz.vzordercase.Product;
 rule "Process selection dataPrep"
 	dialect "mvel
     when
-        $caseData : CaseFileInstance()
+       // $caseData : CaseFileInstance()
         
     then
      //insert($product);
