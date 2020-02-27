@@ -13,6 +13,6 @@ rule "Process selection dataPrep"
         $product : Product() from $caseData.getData("order").products
     then
      insert($product);
-     System.out.println("prodcut inserted into memory" + $product.getName());
+     System.out.println("prodcut inserted into memory" );
      end
 
