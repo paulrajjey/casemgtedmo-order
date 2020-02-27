@@ -1,15 +1,18 @@
 package com.vz.vzordercase;
 
-
-
+import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
+import com.vz.vzordercase.Order;
+import com.vz.vzordercase.Product;
+import java.util.Map;
+import java.util.Map.Entry;
 
 rule "Process selection dataPrep"
-	dialect "mvel
+	dialect "mvel"
     when
-       // $caseData : CaseFileInstance()
-        
+        $caseData : CaseFileInstance()
+        $product : Product() from $caseData.getData("order").products
     then
-     //insert($product);
-     //System.out.println("prodcut inserted into memory" + $product.getName());
+     insert($product);
+     System.out.println("prodcut inserted into memory" + $product.getName());
      end
 
