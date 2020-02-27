@@ -10,7 +10,7 @@ rule "Process selection dataPrep"
 	dialect "mvel"
     when
         $caseData : CaseFileInstance()
-        $product : Product() from $caseData.getData("order").products
+        $product : Product() from $caseData.getData("order").getProducts()
     then
      insert($product);
      System.out.println("prodcut inserted into memory" );
