@@ -1,2 +1,17 @@
 package com.vz.vzordercase;
+import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
+import org.jbpm.document.Document;
+import org.jbpm.document.service.impl.DocumentImpl;
+import java.util.Map;
+import java.util.Map.Entry;
+
+rule "Process selection dataPrep" ruleflow-group "validate"
+
+    when
+        $caseData : CaseFileInstance()
+        $product : Product() from $caseData.getData("order").products
+    then
+     insert($product);
+     System.out.println("prodcut inserted into memory" + $product.getName());
+     end
 
