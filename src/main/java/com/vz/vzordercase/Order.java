@@ -11,7 +11,7 @@ public class Order implements java.io.Serializable {
 	private java.lang.String id;
 	private java.lang.String customerName;
 
-	private com.vz.vzordercase.Product products;
+	private java.util.List<com.vz.vzordercase.Product> products;
 
 	public Order() {
 	}
@@ -32,16 +32,16 @@ public class Order implements java.io.Serializable {
 		this.customerName = customerName;
 	}
 
-	public com.vz.vzordercase.Product getProducts() {
+	public java.util.List<com.vz.vzordercase.Product> getProducts() {
 		return this.products;
 	}
 
-	public void setProducts(com.vz.vzordercase.Product products) {
+	public void setProducts(java.util.List<com.vz.vzordercase.Product> products) {
 		this.products = products;
 	}
 
 	public Order(java.lang.String id, java.lang.String customerName,
-			com.vz.vzordercase.Product products) {
+			java.util.List<com.vz.vzordercase.Product> products) {
 		this.id = id;
 		this.customerName = customerName;
 		this.products = products;
