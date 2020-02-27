@@ -10,7 +10,7 @@ rule "Process selection dataPrep"
 	dialect "mvel"
     when
         $caseData : CaseFileInstance()
-        $order : Order() from $caseData.getData("order")
+        $order : Order() from $caseData.getData("caseFile_order")
         $product : Product() from $order.getProducts()
     then
      insert($product);
