@@ -6,12 +6,33 @@ package com.vz.vzordercase;
 
 public class Order implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Order() {
-    }
+	private java.lang.String id;
+	private java.lang.String customerName;
 
+	public Order() {
+	}
 
+	public java.lang.String getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.String id) {
+		this.id = id;
+	}
+
+	public java.lang.String getCustomerName() {
+		return this.customerName;
+	}
+
+	public void setCustomerName(java.lang.String customerName) {
+		this.customerName = customerName;
+	}
+
+	public Order(java.lang.String id, java.lang.String customerName) {
+		this.id = id;
+		this.customerName = customerName;
+	}
 
 }
