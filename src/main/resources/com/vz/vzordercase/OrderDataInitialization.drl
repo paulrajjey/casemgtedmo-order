@@ -1,7 +1,6 @@
 package com.vz.vzordercase;
 
-import com.vz.vzordercase.Order;
-import com.vz.vzordercase.Product;
+
 
 
 rule "Process selection dataPrep"
