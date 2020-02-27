@@ -1,6 +1,8 @@
 package com.vz.vzordercase;
 
 import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
+import com.vz.vzordercase.Order;
+import com.vz.vzordercase.Product;
 import java.util.Map;
 import java.util.Map.Entry;
 
