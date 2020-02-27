@@ -106,7 +106,7 @@
       <header>startprocess</header>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FreeFormLine>
-          <text>Map parm = new HashMap(); kcontext.getKnowledgeRuntime().startProcess(product.getProcess(), parm);</text>
+          <text>java.util.Map parm = new java.util.HashMap(); kcontext.getKnowledgeRuntime().startProcess(product.getProcess(), parm);</text>
         </org.drools.workbench.models.datamodel.rule.FreeFormLine>
       </definition>
       <childColumns>
