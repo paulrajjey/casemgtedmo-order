@@ -4,7 +4,7 @@ import org.jbpm.casemgmt.api.model.instance.CaseFileInstance;
 import java.util.Map;
 import java.util.Map.Entry;
 
-rule "Process selection dataPrep" ruleflow-group "validate"
+rule "Process selection dataPrep"
 	dialect "mvel
     when
         $caseData : CaseFileInstance()
