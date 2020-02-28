@@ -105,6 +105,8 @@
     <freeForm>
       <text>System.out.println(kcontext.rule.name );
 java.util.Map parm = new java.util.HashMap(); kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
+System.out.println(kcontext.rule.name + &quot;process started&quot;);
+
 </text>
     </freeForm>
   </rhs>
