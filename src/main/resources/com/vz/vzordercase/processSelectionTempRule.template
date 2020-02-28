@@ -106,25 +106,45 @@
   <table>
     <entry>
       <string>productId</string>
-      <list/>
+      <list>
+        <string>1001</string>
+        <string>1002</string>
+        <string>1003</string>
+      </list>
     </entry>
     <entry>
       <string>__ID_KOL_NAME__</string>
-      <list/>
+      <list>
+        <string>3</string>
+        <string>4</string>
+        <string>5</string>
+      </list>
     </entry>
     <entry>
       <string>processId</string>
-      <list/>
+      <list>
+        <string>vzordercase.DVR</string>
+        <string>vzordercase.StreamingHardware</string>
+        <string>vzordercase.StreamingSoftware</string>
+      </list>
     </entry>
     <entry>
       <string>name</string>
-      <list/>
+      <list>
+        <string>DVR</string>
+        <string>Streaming</string>
+        <string>dish</string>
+      </list>
     </entry>
     <entry>
       <string>type</string>
-      <list/>
+      <list>
+        <string>H</string>
+        <string>HS</string>
+        <string>S</string>
+      </list>
     </entry>
   </table>
-  <idCol>0</idCol>
-  <rowsCount>0</rowsCount>
+  <idCol>5</idCol>
+  <rowsCount>3</rowsCount>
 </rule>
