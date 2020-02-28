@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_WlTPUFqBEeqMeMK4Tq1Gdg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_W41PUFqBEeqMeMK4Tq1Gdg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_caseFile_orderItem" structureRef="com.vz.vzordercase.Order"/>
   <bpmn2:itemDefinition id="_caseFile_productListItem" structureRef="java.util.List"/>
   <bpmn2:itemDefinition id="__7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_namespaceInputXItem" structureRef="java.lang.String"/>
@@ -65,30 +65,30 @@
             <drools:metaValue><![CDATA[true]]></drools:metaValue>
           </drools:metaData>
         </bpmn2:extensionElements>
-        <bpmn2:ioSpecification id="_WlTPUVqBEeqMeMK4Tq1Gdg">
+        <bpmn2:ioSpecification id="_W41PUVqBEeqMeMK4Tq1Gdg">
           <bpmn2:dataInput id="_7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactInputX" drools:dtype="com.vz.vzordercase.Order" itemSubjectRef="__7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactInputXItem" name="orderfact"/>
           <bpmn2:dataOutput id="_7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactOutputX" drools:dtype="com.vz.vzordercase.Order" itemSubjectRef="__7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactOutputXItem" name="orderfact"/>
-          <bpmn2:inputSet id="_WlTPUlqBEeqMeMK4Tq1Gdg">
+          <bpmn2:inputSet id="_W41PUlqBEeqMeMK4Tq1Gdg">
             <bpmn2:dataInputRefs>_7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactInputX</bpmn2:dataInputRefs>
           </bpmn2:inputSet>
-          <bpmn2:outputSet id="_WlTPU1qBEeqMeMK4Tq1Gdg">
+          <bpmn2:outputSet id="_W41PU1qBEeqMeMK4Tq1Gdg">
             <bpmn2:dataOutputRefs>_7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactOutputX</bpmn2:dataOutputRefs>
           </bpmn2:outputSet>
         </bpmn2:ioSpecification>
-        <bpmn2:dataInputAssociation id="_WlTPVFqBEeqMeMK4Tq1Gdg">
+        <bpmn2:dataInputAssociation id="_W41PVFqBEeqMeMK4Tq1Gdg">
           <bpmn2:sourceRef>caseFile_order</bpmn2:sourceRef>
           <bpmn2:targetRef>_7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactInputX</bpmn2:targetRef>
         </bpmn2:dataInputAssociation>
-        <bpmn2:dataOutputAssociation id="_WlT2YFqBEeqMeMK4Tq1Gdg">
+        <bpmn2:dataOutputAssociation id="_W41PVVqBEeqMeMK4Tq1Gdg">
           <bpmn2:sourceRef>_7D34E5EE-86DE-40AA-8B07-371B3AC2BA39_orderfactOutputX</bpmn2:sourceRef>
           <bpmn2:targetRef>caseFile_order</bpmn2:targetRef>
         </bpmn2:dataOutputAssociation>
       </bpmn2:businessRuleTask>
-      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_WlT2YVqBEeqMeMK4Tq1Gdg" language="http://www.mvel.org/2.0"><![CDATA[autoComplete]]></bpmn2:completionCondition>
+      <bpmn2:completionCondition xsi:type="bpmn2:tFormalExpression" id="_W41PVlqBEeqMeMK4Tq1Gdg" language="http://www.mvel.org/2.0"><![CDATA[autoComplete]]></bpmn2:completionCondition>
     </bpmn2:adHocSubProcess>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_WlT2YlqBEeqMeMK4Tq1Gdg">
-    <bpmndi:BPMNPlane id="_WlT2Y1qBEeqMeMK4Tq1Gdg" bpmnElement="vzordercase.OrderCase">
+  <bpmndi:BPMNDiagram id="_W41PV1qBEeqMeMK4Tq1Gdg">
+    <bpmndi:BPMNPlane id="_W41PWFqBEeqMeMK4Tq1Gdg" bpmnElement="vzordercase.OrderCase">
       <bpmndi:BPMNShape id="shape__0B1D28A9-7DA9-4883-8F5E-5F7403BD6220" bpmnElement="_0B1D28A9-7DA9-4883-8F5E-5F7403BD6220" isExpanded="true">
         <dc:Bounds height="232.0" width="549.0" x="205.0" y="55.0"/>
       </bpmndi:BPMNShape>
@@ -111,12 +111,12 @@
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_WlT2ZFqBEeqMeMK4Tq1Gdg" type="BPSimData">
+  <bpmn2:relationship id="_W41PWVqBEeqMeMK4Tq1Gdg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F7CE4A2A-03DF-4857-86C9-31D23C67BA7E" id="_WlT2ZVqBEeqMeMK4Tq1Gdg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_F7CE4A2A-03DF-4857-86C9-31D23C67BA7E" id="_W412YFqBEeqMeMK4Tq1Gdg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -126,7 +126,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_WlTPUFqBEeqMeMK4Tq1Gdg</bpmn2:source>
-    <bpmn2:target>_WlTPUFqBEeqMeMK4Tq1Gdg</bpmn2:target>
+    <bpmn2:source>_W41PUFqBEeqMeMK4Tq1Gdg</bpmn2:source>
+    <bpmn2:target>_W41PUFqBEeqMeMK4Tq1Gdg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
