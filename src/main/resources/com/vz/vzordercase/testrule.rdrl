@@ -8,4 +8,5 @@ rule "testrule"
 		order : Order( )
 	then
 		System.out.println( "Rule fired" + kcontext.rule.name );
+		System.out.println( "Order id" + order.getId());
 end
