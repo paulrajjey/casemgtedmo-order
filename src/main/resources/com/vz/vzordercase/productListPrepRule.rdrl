@@ -10,5 +10,5 @@ rule "productListPrepRule"
 		prodList : List( ) from collect ( 		Product( process != null ) from order.products
 ) 
 	then
-		kcontext.setVariable("caseFile_ProductList", prodList)
+		kcontext.setVariable("caseFile_ProductList", prodList);
 end
