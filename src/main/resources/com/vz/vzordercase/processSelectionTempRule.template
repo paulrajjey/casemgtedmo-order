@@ -102,6 +102,9 @@
       </fieldValues>
       <variable>prod</variable>
     </setField>
+    <freeForm>
+      <text>java.util.Map parm = new java.util.HashMap(); kcontext.getKnowledgeRuntime().startProcess(product.getProcess(), parm);</text>
+    </freeForm>
   </rhs>
   <imports>
     <imports/>
