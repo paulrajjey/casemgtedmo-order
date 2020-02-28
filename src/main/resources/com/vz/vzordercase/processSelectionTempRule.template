@@ -1,7 +1,12 @@
 <rule>
   <name>processSelectionTempRule</name>
   <modelVersion>1.0</modelVersion>
-  <attributes/>
+  <attributes>
+    <attribute>
+      <attributeName>ruleflow-group</attributeName>
+      <value>processSelection</value>
+    </attribute>
+  </attributes>
   <metadataList/>
   <lhs>
     <fact>
