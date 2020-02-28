@@ -41,7 +41,6 @@ rule "Process selection dataPrep1"
 
     then
      System.out.println("order 191919" +  $caseData.getData.toString());
-     Order or = $caseData.getData().get("order");
-      System.out.println("order 1111119" +  or.getId());
+
      end
 
