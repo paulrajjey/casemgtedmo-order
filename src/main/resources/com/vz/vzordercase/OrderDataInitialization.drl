@@ -16,4 +16,21 @@ rule "Process selection dataPrep"
      insert($product);
      System.out.println("prodcut inserted into memory" + $product.getName());
      end
+rule "Process selection dataPrep1"
+	dialect "mvel"
+    when
+        $caseData : CaseFileInstance()
+        $order : Order() from $caseData.getData("caseFile_order")
+       
+    then
+     System.out.println("order" + $order.getName());
+     end
+     rule "Process selection dataPrep2"
+	dialect "mvel"
+    when
+        $caseData : CaseFileInstance()
+
+    then
+     System.out.println("order 191919" );
+     end
 
