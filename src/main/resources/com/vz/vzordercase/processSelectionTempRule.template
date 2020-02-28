@@ -3,8 +3,101 @@
   <modelVersion>1.0</modelVersion>
   <attributes/>
   <metadataList/>
-  <lhs/>
-  <rhs/>
+  <lhs>
+    <fact>
+      <factType>Order</factType>
+      <boundName>order</boundName>
+      <isNegated>false</isNegated>
+      <window>
+        <parameters/>
+      </window>
+    </fact>
+    <fromCompositePattern>
+      <factPattern>
+        <constraintList>
+          <constraints>
+            <fieldConstraint>
+              <value>productId</value>
+              <operator>==</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>Product</factType>
+              <fieldName>id</fieldName>
+              <fieldType>String</fieldType>
+            </fieldConstraint>
+            <fieldConstraint>
+              <value>name</value>
+              <operator>==</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>Product</factType>
+              <fieldName>name</fieldName>
+              <fieldType>String</fieldType>
+            </fieldConstraint>
+            <fieldConstraint>
+              <value>type</value>
+              <operator>==</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>Product</factType>
+              <fieldName>type</fieldName>
+              <fieldType>String</fieldType>
+            </fieldConstraint>
+          </constraints>
+        </constraintList>
+        <factType>Product</factType>
+        <boundName>prod</boundName>
+        <isNegated>false</isNegated>
+        <window>
+          <parameters/>
+        </window>
+      </factPattern>
+      <expression>
+        <parts>
+          <variable>
+            <next class="collection">
+              <prev class="variable" reference="../.."/>
+              <name>products</name>
+              <classType>java.util.List</classType>
+              <genericType>Collection</genericType>
+              <parametricType>Product</parametricType>
+            </next>
+            <name>order</name>
+            <classType>Order</classType>
+            <genericType>Order</genericType>
+            <factType>Order</factType>
+          </variable>
+          <collection reference="../variable/next"/>
+        </parts>
+        <index>2147483647</index>
+      </expression>
+    </fromCompositePattern>
+  </lhs>
+  <rhs>
+    <setField>
+      <fieldValues>
+        <fieldValue>
+          <field>process</field>
+          <value>processId</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+      </fieldValues>
+      <variable>prod</variable>
+    </setField>
+  </rhs>
   <imports>
     <imports/>
   </imports>
@@ -12,7 +105,23 @@
   <isNegated>false</isNegated>
   <table>
     <entry>
+      <string>productId</string>
+      <list/>
+    </entry>
+    <entry>
       <string>__ID_KOL_NAME__</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>processId</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>name</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>type</string>
       <list/>
     </entry>
   </table>
