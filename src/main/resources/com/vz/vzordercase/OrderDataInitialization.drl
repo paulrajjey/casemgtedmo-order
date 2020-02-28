@@ -23,7 +23,7 @@ rule "Process selection dataPrep1"
         $order : Order() from $caseData.getData("caseFile_order")
        
     then
-     System.out.println("order" + $order.getName());
+     System.out.println("order" + $order.getCustomerName());
      end
      rule "Process selection dataPrep2"
 	dialect "mvel"
