@@ -103,8 +103,9 @@
       <variable>prod</variable>
     </setField>
     <freeForm>
-      <text>java.util.Map parm = new java.util.HashMap(); kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
-System.out.println(kcontext.rule.name );</text>
+      <text>System.out.println(kcontext.rule.name );
+java.util.Map parm = new java.util.HashMap(); kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
+</text>
     </freeForm>
   </rhs>
   <imports>
