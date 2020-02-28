@@ -4,6 +4,7 @@ import java.lang.Number;
 
 rule "testrule"
 	dialect "mvel"
+	ruleflow-group "processSelection"
 	when
 		order : Order( )
 	then
