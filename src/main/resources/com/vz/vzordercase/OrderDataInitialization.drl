@@ -40,6 +40,6 @@ rule "Process selection dataPrep1"
         $caseData : CaseFileInstance()
 
     then
-     System.out.println("order 191919" );
+     System.out.println("order 191919" +  $caseData.toString());
      end
 
