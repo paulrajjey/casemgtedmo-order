@@ -25,6 +25,15 @@ rule "Process selection dataPrep1"
     then
      System.out.println("order" + $order.getCustomerName());
      end
+     rule "Process selection order"
+	dialect "mvel"
+    when
+        $caseData : CaseFileInstance()
+        $order : Order() from $caseData.getData("order")
+       
+    then
+     System.out.println("order" + $order.getCustomerName());
+     end
      rule "Process selection dataPrep2"
 	dialect "mvel"
     when
