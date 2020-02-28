@@ -1,9 +1,14 @@
 package com.vz.vzordercase;
 
 import java.lang.Number;
+import java.util.List;
 
 rule "productListPrepRule"
 	dialect "mvel"
 	when
+		order : Order( )
+		prodList : List( ) from collect ( 		Product( process != null ) from order.products
+) 
 	then
+		kcontext.setVariable("caseFile_ProductList", prodList)
 end
