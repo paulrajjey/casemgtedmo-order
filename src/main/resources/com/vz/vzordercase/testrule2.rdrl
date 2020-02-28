@@ -6,8 +6,7 @@ rule "testrule2"
 	dialect "mvel"
 	ruleflow-group "processSelection"
 	when
-		order : Order( )
+		not (Order( )) 
 	then
 		System.out.println( "Rule fired" + kcontext.rule.name );
-		System.out.println( "Order id" + order.getId());
 end
