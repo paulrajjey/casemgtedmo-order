@@ -1,0 +1,9 @@
+package com.vz.vzordercase;
+
+import java.lang.Number;
+
+rule "testrule"
+	dialect "mvel"
+	when
+	then
+end
