@@ -11,10 +11,8 @@ rule "Process selection dataPrep"
     when
         $caseData : CaseFileInstance()
         $order : Order() from $caseData.getData("ordered") 
-        $product : Product() from $order.getProducts()
     then
-     insert($product);
-     System.out.println("prodcut inserted into memory" + $product.getName());
+     System.out.println("prodcut inserted into memory" + $order.getId());
      end
 rule "Process selection dataPrep1"
 	dialect "mvel"
