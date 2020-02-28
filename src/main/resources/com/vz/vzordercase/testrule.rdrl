@@ -5,6 +5,7 @@ import java.lang.Number;
 rule "testrule"
 	dialect "mvel"
 	ruleflow-group "processSelection"
+	enabled false
 	when
 		order : Order( )
 	then
