@@ -104,8 +104,6 @@
     </setField>
     <freeForm>
       <text>System.out.println(kcontext.rule.name );
-java.util.Map parm = new java.util.HashMap(); parm.put(&quot;caseId&quot; , order.getId()); parm.put(&quot;product&quot; , prod);  kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
-System.out.println(kcontext.rule.name + &quot;process started&quot;);
 
 </text>
     </freeForm>
