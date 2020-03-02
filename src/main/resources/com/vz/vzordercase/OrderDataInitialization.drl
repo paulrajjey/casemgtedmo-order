@@ -5,6 +5,8 @@ import com.vz.vzordercase.Order;
 import com.vz.vzordercase.Product;
 import java.util.Map;
 import java.util.Map.Entry;
+import org.jbpm.casemgmt.api.CaseService;
+import org.jbpm.services.api.service.ServiceRegistry;
 
 rule "Process selection dataPrep"
 	dialect "mvel"
@@ -41,18 +43,18 @@ rule "Process selection dataPrep1"
      System.out.println("order 191919" +  $caseData.getData.toString());
 
      end
-     rule "preocessretry"
+    
+    rule "preocessretry"
 	dialect "mvel"
     when
         $caseData : CaseFileInstance()
-        prod : Product from $caseData.getData("retry") 
+        prod : Product() from $caseData.getData("retry") 
     then
-     System.out.println("Retry Process" + prod.getId());
-     $caseData.remove("hwSpec");
-     update($caseData);
-     CaseService caseService = (CaseService)
-     ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); caseService.triggerAdHocFragment($caseData.getCaseId(), 
-      "Prepare hardware spec", null);
+    
+     System.out.println("retry process" +  prod.getId());
+     CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
+     caseService.triggerAdHocFragment($caseData.getCaseId(), "Prepare hardware spec", null);
+     
      
      end
 
