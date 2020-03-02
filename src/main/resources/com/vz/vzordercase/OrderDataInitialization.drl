@@ -50,6 +50,7 @@ rule "Process selection dataPrep1"
         $caseData : CaseFileInstance()
         prod : Product() from $caseData.getData("retry") 
     then
+    System.out.println("retry process entered" +  prod.getId());
      $caseData.remove("retry");
      kcontext.update($caseData);
      System.out.println("retry process" +  prod.getId());
