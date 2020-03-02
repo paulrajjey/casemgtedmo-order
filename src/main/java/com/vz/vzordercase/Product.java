@@ -14,6 +14,8 @@ public class Product implements java.io.Serializable {
 
 	private java.lang.String process;
 
+	private java.lang.String processStatus;
+
 	public Product() {
 	}
 
@@ -49,12 +51,22 @@ public class Product implements java.io.Serializable {
 		this.process = process;
 	}
 
+	public java.lang.String getProcessStatus() {
+		return this.processStatus;
+	}
+
+	public void setProcessStatus(java.lang.String processStatus) {
+		this.processStatus = processStatus;
+	}
+
 	public Product(java.lang.String id, java.lang.String name,
-			java.lang.String type, java.lang.String process) {
+			java.lang.String type, java.lang.String process,
+			java.lang.String processStatus) {
 		this.id = id;
 		this.name = name;
 		this.type = type;
 		this.process = process;
+		this.processStatus = processStatus;
 	}
 
 }
