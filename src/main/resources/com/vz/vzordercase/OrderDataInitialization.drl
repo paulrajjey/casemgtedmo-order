@@ -50,11 +50,14 @@ rule "Process selection dataPrep1"
         $caseData : CaseFileInstance()
         prod : Product() from $caseData.getData("retry") 
     then
-    
+     $caseData.remove("retry");
+     update($caseData);
      System.out.println("retry process" +  prod.getId());
      CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
-     caseService.triggerAdHocFragment($caseData.getCaseId(), "Prepare hardware spec", null);
-     
+     Map param = new HashMap();
+     param.put("product",prod);
+     caseService.triggerAdHocFragment($caseData.getCaseId(), "Prepare hardware spec", param);
+    
      
      end
 
