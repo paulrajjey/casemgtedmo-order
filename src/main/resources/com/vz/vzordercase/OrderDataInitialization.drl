@@ -57,13 +57,16 @@ rule "Process selection dataPrep1"
      $caseData.remove("retry");
      kcontext.update($caseData);
      System.out.println("retry process" +  prod.getId());
-     //CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
+     CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
      //caseService.triggerAdHocFragment($caseData.getCaseId(), "start re-try process", prod);
-     ProcessService processService = (ProcessService) ServiceRegistry.get().service(ServiceRegistry.PROCESS_SERVICE);
-     //caseService.triggerAdHocFragment($caseData.getCaseId(), "", prod);
      java.util.Map parm = new java.util.HashMap(); parm.put("caseId" , $caseData.getCaseId());
      parm.put("product" , prod);  
-     kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
+     caseService.addDynamicTask($caseData.getCaseId(),prod.getProcess() , parm);
+     //ProcessService processService = (ProcessService) ServiceRegistry.get().service(ServiceRegistry.PROCESS_SERVICE);
+     //caseService.triggerAdHocFragment($caseData.getCaseId(), "", prod);
+     //java.util.Map parm = new java.util.HashMap(); parm.put("caseId" , $caseData.getCaseId());
+     //parm.put("product" , prod);  
+     //kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
      
      end
 
