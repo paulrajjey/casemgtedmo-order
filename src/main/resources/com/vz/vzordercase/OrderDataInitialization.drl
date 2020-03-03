@@ -63,7 +63,7 @@ rule "Process selection dataPrep1"
      parm.put("productId" , prod.getId() );
      parm.put(prod.getId() , prod);  
      caseService.addDynamicSubprocess($caseData.getCaseId(),prod.getProcess() , parm);
-     caseService.triggerAdHocFragment($caseData.getCaseId(),prod.getProcess() , parm);
+     caseService.triggerAdHocFragment($caseData.getCaseId(),"Retry-Installation item" , parm);
 
      //ProcessService processService = (ProcessService) ServiceRegistry.get().service(ServiceRegistry.PROCESS_SERVICE);
      //caseService.triggerAdHocFragment($caseData.getCaseId(), "", prod);
