@@ -6,8 +6,7 @@ import com.vz.vzordercase.Product;
 import java.util.Map;
 import java.util.Map.Entry;
 import org.jbpm.casemgmt.api.CaseService;
-import org.jbpm.casemgmt.api.ProcessService;
-
+import org.jbpm.services.api.ProcessService
 import org.jbpm.services.api.service.ServiceRegistry;
 
 rule "Process selection dataPrep"
