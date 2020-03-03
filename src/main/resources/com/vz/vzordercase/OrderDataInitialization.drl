@@ -47,6 +47,7 @@ rule "Process selection dataPrep1"
     
    rule "preocessretry"
 	dialect "mvel"
+    ruleflow-group "retry"
 
     when
         $caseData : CaseFileInstance()
