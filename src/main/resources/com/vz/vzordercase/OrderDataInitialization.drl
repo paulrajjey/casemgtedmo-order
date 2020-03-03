@@ -58,7 +58,7 @@ rule "Process selection dataPrep1"
      System.out.println("retry process" +  prod.getId());
      CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
      caseService.triggerAdHocFragment($caseData.getCaseId(), "start re-try process", prod);
-     
+
      
      end
 
