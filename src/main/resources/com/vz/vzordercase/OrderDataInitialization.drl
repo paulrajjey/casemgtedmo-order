@@ -44,5 +44,20 @@ rule "Process selection dataPrep1"
 
      end
     
-   
+   rule "preocessretry"
+	dialect "mvel"
+    when
+        $caseData : CaseFileInstance()
+        prod : Product() from $caseData.getData("retry") 
+    then
+    System.out.println("retry process entered" +  prod.getId());
+    System.out.println("retry case id" +  $caseData.getCaseId());
+     $caseData.remove("retry");
+     kcontext.update($caseData);
+     System.out.println("retry process" +  prod.getId());
+     CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
+     caseService.triggerAdHocFragment($caseData.getCaseId(), "Retry-process", prod);
+     
+     
+     end
 
