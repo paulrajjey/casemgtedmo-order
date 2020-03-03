@@ -55,7 +55,7 @@ rule "Process selection dataPrep1"
      kcontext.update($caseData);
      System.out.println("retry process" +  prod.getId());
      CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
-     caseService.triggerAdHocFragment($caseData.getCaseId(), "Retry-process", null);
+     caseService.triggerAdHocFragment($caseData.getCaseId(), "Retry-process", prod);
      
      
      end
