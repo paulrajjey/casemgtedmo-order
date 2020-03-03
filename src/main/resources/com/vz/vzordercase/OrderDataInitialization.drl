@@ -60,8 +60,11 @@ rule "Process selection dataPrep1"
      CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
      java.util.Map parm = new java.util.HashMap(); 
      parm.put("caseId" , $caseData.getCaseId() );
-     parm.put("product" , prod);  
+     parm.put("productId" , prod.getId() );
+     parm.put(prod.getId() , prod);  
      caseService.addDynamicSubprocess($caseData.getCaseId(),prod.getProcess() , parm);
+     caseService.triggerAdHocFragment($caseData.getCaseId(),prod.getProcess() , parm);
+
      //ProcessService processService = (ProcessService) ServiceRegistry.get().service(ServiceRegistry.PROCESS_SERVICE);
      //caseService.triggerAdHocFragment($caseData.getCaseId(), "", prod);
      //java.util.Map parm = new java.util.HashMap(); parm.put("caseId" , $caseData.getCaseId());
