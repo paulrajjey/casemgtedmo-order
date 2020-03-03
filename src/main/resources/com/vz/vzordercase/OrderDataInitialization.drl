@@ -61,7 +61,7 @@ rule "Process selection dataPrep1"
      java.util.Map parm = new java.util.HashMap(); 
      parm.put("caseId" , $caseData.getCaseId() );
      parm.put("productId" , prod.getId() );
-     parm.put("productId-"+prod.getId() , prod);  
+     parm.put("productId"+prod.getId() , prod);  
      caseService.addDynamicSubprocess($caseData.getCaseId(),prod.getProcess() , parm);
      caseService.triggerAdHocFragment($caseData.getCaseId(),"Retry-Installation item" , parm);
 
