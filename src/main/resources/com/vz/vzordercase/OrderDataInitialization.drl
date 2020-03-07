@@ -45,35 +45,5 @@ rule "Process selection dataPrep1"
 
      end
     
-   rule "preocessretry"
-	dialect "mvel"
-
-    when
-        $caseData : CaseFileInstance()
-        prod : Product() from $caseData.getData("retry") 
-    then
-    System.out.println("retry process entered" +  prod.getId());
-    System.out.println("retry case id" +  $caseData.getCaseId());
-     $caseData.remove("retry");
-     kcontext.update($caseData);
-     System.out.println("retry process" +  prod.getId());
-     CaseService caseService = (CaseService) ServiceRegistry.get().service(ServiceRegistry.CASE_SERVICE); 
-     java.util.Map parm = new java.util.HashMap(); 
-     parm.put("caseId" , $caseData.getCaseId() );
-     parm.put("productId" , prod.getId() );
-     parm.put("productId-"+prod.getId() , prod);
-     
-    java.util.Map param = new java.util.HashMap(); 
-
-     param.put("caseId" , $caseData.getCaseId());
-     parm.put("product" , prod); 
-     caseService.addDynamicSubprocess($caseData.getCaseId(),prod.getProcess() , param);
-     caseService.triggerAdHocFragment($caseData.getCaseId(),"Retry-Installation item" , parm);
-
-     //ProcessService processService = (ProcessService) ServiceRegistry.get().service(ServiceRegistry.PROCESS_SERVICE);
-     //caseService.triggerAdHocFragment($caseData.getCaseId(), "", prod);
-     //java.util.Map parm = new java.util.HashMap(); parm.put("caseId" , $caseData.getCaseId());
-     //parm.put("product" , prod);  
-     //kcontext.getKnowledgeRuntime().startProcess(prod.getProcess(), parm);
-     end
+ 
 
